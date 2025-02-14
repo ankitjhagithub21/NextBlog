@@ -26,7 +26,31 @@ const Blogs = () => {
 
   if (loading) {
     return (
-      <div className="text-center text-xl font-bold">Loading blogs...</div>
+      <div className="grid grid-cols-1 md:grid-cols-3 max-w-6xl mx-auto gap-6 px-4 py-12">
+         {
+          [1,2,3].map((num,idx)=>{
+            return  <div key={idx} className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition duration-300"
+            >
+              
+              <div className="w-full h-48 animate-pulse bg-gray-200"></div>
+              <div className="p-4">
+                <div className="text-xl font-semibold mb-3 p-3 animate-pulse bg-gray-200 w-full"></div>
+                <div className="flex flex-wrap gap-2 mb-3">
+                  {[1,2,3,4].map((tag, index) => (
+                    <span
+                      key={index}
+                      className="bg-gray-200 text-sm animate-pulse px-2 py-1 w-24 h-6 rounded-full"
+                    >
+                      
+                    </span>
+                  ))}
+                </div>
+               
+              </div>
+            </div>
+          })
+         }
+      </div>
     );
   }
 
@@ -40,12 +64,12 @@ const Blogs = () => {
         >
           <img src={blog.image} alt={blog.title} className="w-full h-48 object-cover" />
           <div className="p-4">
-            <h3 className="text-xl font-semibold mb-2">{blog.title}</h3>
+            <h3 className="text-xl font-semibold mb-3">{blog.title}</h3>
             <div className="flex flex-wrap gap-2 mb-3">
               {blog.tags.map((tag, index) => (
                 <span
                   key={index}
-                  className="bg-gray-200 text-sm px-2 py-1 rounded-full"
+                  className="bg-gray-200 text-xs px-3 font-semibold py-1 rounded-full"
                 >
                   {tag}
                 </span>

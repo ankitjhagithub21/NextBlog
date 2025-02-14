@@ -72,7 +72,7 @@ const NewBlog = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto my-12 p-4">
+    <div className="max-w-6xlq mx-auto my-12 p-4">
       <h2 className="text-2xl font-bold mb-6">Add New Blog</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="grid md:grid-cols-2 grid-cols-1 gap-5">
