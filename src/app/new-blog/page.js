@@ -1,9 +1,16 @@
 "use client";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import JoditEditor from "jodit-react";
 import { toast } from "react-toastify";
 
 const NewBlog = () => {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // Code that uses `self`, `window`, or `document` goes here
+    }
+  }, []);
+  
+  
   const [blog, setBlog] = useState({
     title: "",
     author: "",
