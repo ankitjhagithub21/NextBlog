@@ -31,7 +31,8 @@ const Blogs = () => {
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 max-w-6xl mx-auto gap-6 p-4">
+   <section className="py-12">
+     <div className="grid grid-cols-1 md:grid-cols-3 max-w-6xl mx-auto gap-6 p-4">
       {blogs.map((blog) => (
         <div
           key={blog._id}
@@ -57,6 +58,7 @@ const Blogs = () => {
         </div>
       ))}
     </div>
+   </section>
   );
 };
 
